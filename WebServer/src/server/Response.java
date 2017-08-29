@@ -27,7 +27,7 @@ public class Response {
 		ContentTypeCollection.put("ico", "image/x-icon");
 	}
 	
-	public static String Server = "GodServer";
+	public static String Server = Options.ServerName;
 	
 	public static int ContentLength;
 	
