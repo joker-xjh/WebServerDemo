@@ -11,6 +11,10 @@ public class BaseTemplate {
 		param = new HashMap<>();
 	}
 	
+	public String display() {
+		return param.toString();
+	}
+	
 	public String get(String key) {
 		Object val = param.get(key);
 		if(val != null)
