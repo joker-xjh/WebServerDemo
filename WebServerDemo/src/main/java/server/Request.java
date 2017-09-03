@@ -13,7 +13,7 @@ public class Request {
 	private String remoteIP;
 	
 	public Request(String url) {
-		StringTokenizer tokenizer = new StringTokenizer(url, "\n");
+		StringTokenizer tokenizer = new StringTokenizer(url, "\r\n");
 		header = new HashMap<>();
 		argument = new HashMap<>();
 		cookies = new HashMap<>();
