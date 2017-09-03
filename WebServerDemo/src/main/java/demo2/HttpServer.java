@@ -15,6 +15,8 @@ public class HttpServer {
 	
 	private static final String directory = "";
 
+	
+	
 	public static void main(String[] args) {
 		try(ServerSocket serverSocket = new ServerSocket(8888)) {
 			while(true) {
