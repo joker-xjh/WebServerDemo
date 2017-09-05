@@ -86,6 +86,7 @@ public abstract class HttpWorker implements Callable<Void>{
 			}
 			else {
 				sb.append((char)read);
+				cr = false;
 			}
 			
 		}
