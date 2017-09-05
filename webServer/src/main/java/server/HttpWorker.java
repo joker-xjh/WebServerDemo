@@ -84,6 +84,9 @@ public abstract class HttpWorker implements Callable<Void>{
 			else if(read == '\n' && cr) {
 				return sb.toString();
 			}
+			else if(read == '\n' && !cr) {
+				throw new IOException("Bad Request");
+			}
 			else {
 				sb.append((char)read);
 				cr = false;
@@ -91,7 +94,7 @@ public abstract class HttpWorker implements Callable<Void>{
 			
 		}
 		
-		return sb.toString();
+		throw new IOException("Bad Request");
 	}
 	
 	
