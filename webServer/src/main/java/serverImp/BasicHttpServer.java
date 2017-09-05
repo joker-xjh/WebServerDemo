@@ -51,7 +51,6 @@ public class BasicHttpServer implements HttpServer{
 						dispatchRequest(client);
 					} catch (IOException e) {
 						e.printStackTrace();
-						running = false;
 					}
 				}
 			}
@@ -62,6 +61,7 @@ public class BasicHttpServer implements HttpServer{
 	@Override
 	public void stop() {
 		try {
+			running = false;
 			server.close();
 			workPool.shutdown();
 			servicePool.shutdown();
